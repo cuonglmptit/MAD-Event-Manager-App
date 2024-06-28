@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestLayoutsAc">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_alignTop="@id/radBtnGroupAddFeedbackType"
+            android:layout_alignBottom="@id/radBtnGroupAddFeedbackType"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/happy_face" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/neutral_face" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/angry_face" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radBtnGroupAddFeedbackType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radBtnPositive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:buttonTint="@color/green"
+                android:checked="true"
+                android:textColor="@color/green"
+                android:text="Tích cực"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:id="@+id/radBtnNeutral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radBtnPositive"
+                android:layout_marginVertical="5dp"
+                android:buttonTint="@color/darker_gray"
+                android:textColor="@color/darker_gray"
+                android:text="Bình thường"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:id="@+id/radBtnNegative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radBtnNeutral"
+                android:layout_marginVertical="5dp"
+                android:buttonTint="@color/angry_red"
+                android:textColor="@color/angry_red"
+                android:textSize="16dp"
+                android:text="Tiêu cực" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+</RelativeLayout>

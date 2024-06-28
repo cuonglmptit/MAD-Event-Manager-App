@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/white_border"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtViewAddFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_blue_corner_topleft_topright"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Gửi phản hồi"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edtTextAddFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_corner10_border_gray"
+            android:gravity="top"
+            android:hint="Nhập suy nghĩ của bạn..."
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignTop="@id/radBtnGroupAddFeedbackType"
+                android:layout_alignBottom="@id/radBtnGroupAddFeedbackType"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/happy_face" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/neutral_face" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/angry_face" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radBtnGroupAddFeedbackType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radBtnPositive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:buttonTint="@color/green"
+                    android:checked="true"
+                    android:textColor="@color/green"
+                    android:text="Tích cực"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/radBtnNeutral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radBtnPositive"
+                    android:layout_marginVertical="5dp"
+                    android:buttonTint="@color/darker_gray"
+                    android:textColor="@color/darker_gray"
+                    android:text="Bình thường"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/radBtnNegative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radBtnNeutral"
+                    android:layout_marginVertical="5dp"
+                    android:buttonTint="@color/angry_red"
+                    android:textColor="@color/angry_red"
+                    android:textSize="16dp"
+                    android:text="Tiêu cực" />
+
+            </RadioGroup>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelAddFeedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:alpha="0.7"
+                android:background="@drawable/bg_gray_corner10"
+                android:text="Hủy"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/btnSendAddFeedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_blue_corner10"
+                android:text="Gửi"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/white_border"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtViewMoreOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_blue_corner_topleft_topright"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="More Options"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/white_border"
+            android:elevation="10dp"
+            android:layout_marginVertical="5dp">
+            <ImageButton
+                android:id="@+id/btnEventFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:padding="10dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/comment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:textSize="16dp"
+                android:text="Feedback"
+                android:textColor="@color/black" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/white_border"
+            android:elevation="10dp"
+            android:layout_marginVertical="10dp">
+            <ImageButton
+                android:id="@+id/btnEventSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:padding="10dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/supplier"/>
+
+            <TextView
+                android:id="@+id/scheduletext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:textSize="16dp"
+                android:text="Supplier"
+                android:textColor="@color/black" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

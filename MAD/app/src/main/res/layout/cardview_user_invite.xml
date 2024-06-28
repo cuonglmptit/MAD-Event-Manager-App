@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:backgroundTint="@color/light_blue"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtListIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/listImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/txtListIndex"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_list_icon" />
+
+        <TextView
+            android:id="@+id/txtViewInviteDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@+id/imgViewInviteStatus"
+            android:text="dd/MM/yyyy"
+            android:textSize="13dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtViewUserInviteName"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/listImage"
+            android:gravity="center|left"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgViewInviteStatus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/accept_mark"
+            android:text="time"
+            android:textSize="16sp" />
+        <ImageButton
+            android:id="@+id/btnDeleteUser"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/declined"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

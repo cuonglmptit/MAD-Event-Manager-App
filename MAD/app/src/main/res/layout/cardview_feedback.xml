@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginVertical="5dp"
+    android:layout_marginHorizontal="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/light_blue">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/listImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_list_icon" />
+
+        <TextView
+            android:id="@+id/txtFeedbackUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@id/listImage"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgViewFeedbackTypeOfUser"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/happy_face"
+            android:text="time"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/txtViewFeedbackMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Tuyệt vời!"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/listImage"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/txtViewFeedbackCreatedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="13-09-2002"
+            android:textStyle="italic"
+            android:layout_marginStart="20dp"
+            android:layout_toStartOf="@id/imgViewFeedbackTypeOfUser"
+            android:textSize="15dp"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

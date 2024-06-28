@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manageDetailParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateInviteActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarCreateInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:theme="@style/Base.Theme.MAD"
+        app:titleTextColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/eventImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/toolBarCreateInvite">
+
+        <ImageView
+            android:id="@+id/imgViewEventCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tthnqg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/customborder">
+
+            <TextView
+                android:id="@+id/eventFeedbackName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Event of duy"
+                android:textColor="#27D2E1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/eventFeedbackTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventFeedbackName"
+                android:layout_centerHorizontal="true"
+                android:text="Tue, Feb 27 2024 at 11:55 am"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fieldLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/eventImageLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputAddUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:hint="Nhập id/username người được mời"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/addInviteUserButton"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add_invite_user" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtViewAddedUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fieldLayout"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:text="Đã thêm: "
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addedUserRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtViewAddedUser"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:id="@+id/btnSendInvite"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/blue"
+        android:text="Gửi"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</RelativeLayout>

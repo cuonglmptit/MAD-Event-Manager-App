@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manageDetailParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AcceptedUsersActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarCreateInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:theme="@style/Base.Theme.MAD"
+        app:titleTextColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/eventImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/toolBarCreateInvite">
+
+        <ImageView
+            android:id="@+id/imgViewEventCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tthnqg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/customborder">
+
+            <TextView
+                android:id="@+id/eventFeedbackName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Event of duy"
+                android:textColor="#27D2E1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/eventFeedbackTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventFeedbackName"
+                android:layout_centerHorizontal="true"
+                android:text="Tue, Feb 27 2024 at 11:55 am"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtViewNumberAcceptedUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventImageLayout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:text="X người"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/colHeader"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/txtViewNumberAcceptedUser"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="#007BFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  STT   |   User"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    <Spinner
+        android:id="@+id/spnUserInviteStatus"
+        android:layout_width="wrap_content"
+        android:gravity="right"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userInviteRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/colHeader">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

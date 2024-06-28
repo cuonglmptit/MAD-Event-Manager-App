@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragmentUser">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp">
+        <ImageView
+            android:id="@+id/userProfileIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_list_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"/>
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_below="@id/userProfileIcon"
+            android:id="@+id/nameOfUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/dobOfUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameOfUser"
+            android:text="DOB: "
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/phoneNumberOfUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dobOfUser"
+            android:text="Phone Number: "
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneNumberOfUser"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/red"
+            android:text="Logout"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</RelativeLayout>
